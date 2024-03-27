@@ -1,3 +1,8 @@
 Testar att commita
+<<<<<<< Updated upstream
 
 Nu ska jag testa lite mera saker 
+=======
+hej hej hej 
+
+>>>>>>> Stashed changes
