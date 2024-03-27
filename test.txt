@@ -1,4 +1,8 @@
 Testar att commita
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> f77195f (tries to reset)
 <<<<<<< Updated upstream
 
 Nu ska jag testa lite mera saker 
@@ -6,3 +10,8 @@ Nu ska jag testa lite mera saker
 hej hej hej 
 
 >>>>>>> Stashed changes
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> parent of 2445e70 (Update test.txt)
+>>>>>>> f77195f (tries to reset)
