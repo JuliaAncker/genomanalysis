@@ -15,9 +15,8 @@ module load python/3.7.2
 module load quast/5.0.2
 
 pilon_assembly="/home/juliaa/genomanalys/Data/Assembly/genome_assembly/pilon_assembly/pilon_assembly.fasta"
-flye_assembly_ref="/home/juliaa/genomanalys/Data/Assembly/genome_assembly/pac_bio_assembly/assembly.fasta"
-output_dir="/home/juliaa/genomanalys/Data/Assembly/assembly_QC/QC_2"
+output_dir="/home/juliaa/genomanalys/Data/Assembly/assembly_QC/QC_3"
 
-quast.py $pilon_assembly -r $flye_assembly_ref -o $output_dir
+quast.py $pilon_assembly -o $output_dir
 
 
