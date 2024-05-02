@@ -5,19 +5,16 @@
 #SBATCH -p core
 #SBATCH -n 2
 #SBATCH -t 00:20:00
-#SBATCH -J 01_sam2bam
+#SBATCH -J 02_FastQC_wgs
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user julia.ancker@gmail.com
 #SBATCH --output=%x.%j.out
 # Load modules
 module load bioinfo-tools
-module load samtools/0.1.19
-
+module load FastQC/0.11.9
 # Your commands
 
-input_dir=/home/juliaa/genomanalys/Data/Assembly/transcriptome_assembly/02_star_rp/mapping_rp
+input=/home/juliaa/genomanalys/Data/Raw_data/RNA_samples/untrimmed/SRR6040095_scaffold_10.1.fastq.gz
+output=/home/juliaa/genomanalys/Data/Assembly/transcriptome_assembly/rna_qc
 
-for sam_file in "$input_dir"/*.sam; do
-	samtools view -bS "$sam_file" > "${sam_file%.sam}.bam"
-	rm $sam_file
-done
+fastqc $input -o $output
