@@ -188,3 +188,14 @@ png(output_heatmap_path, width = 10, height = 8, units = "in", res = 300)
 print(heatmap_plot)
 dev.off()
 
+
+# Extract genes, log2 fold change, and p-values for significant genes
+genes_info <- res_df[rownames(res_df) %in% significant_genes_list, c("log2FoldChange", "padj")]
+
+# Extract genes, log2 fold change, and p-values for significant genes including gene "2251_g"
+genes_info <- res_df[rownames(res_df) %in% c(significant_genes_list, "2251_g"), c("log2FoldChange", "padj")]
+
+
+# Save the extracted information to a CSV file
+write.csv(genes_info, file.path(output_dir, "significant_genes_aril.csv"), row.names = TRUE)
+
