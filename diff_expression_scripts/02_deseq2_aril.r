@@ -83,11 +83,9 @@ colnames(res_df)[1] <- "gene"
 # Save the results to a CSV file
 write.csv(res_df, file.path(output_dir, "03_DESeq2_results_aril.csv"))
 
-# Optional: Plotting or additional analyses can be added here
-# For example, creating an MA plot
+
 plotMA(dds, main = "MA-plot")
 
-# Optional: Save the filtered metadata if needed
 # write.csv(metadata, "/path/to/filtered_metadata.csv")
 
 # Creating plots, such as MA plot
@@ -192,7 +190,7 @@ dev.off()
 # Extract genes, log2 fold change, and p-values for significant genes
 genes_info <- res_df[rownames(res_df) %in% significant_genes_list, c("log2FoldChange", "padj")]
 
-# Extract genes, log2 fold change, and p-values for significant genes including gene "2251_g"
+# Extract specific genes of interest
 genes_info <- res_df[rownames(res_df) %in% c(significant_genes_list, "2251_g"), c("log2FoldChange", "padj")]
 
 
