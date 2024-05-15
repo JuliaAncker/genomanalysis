@@ -39,7 +39,6 @@ source $AUGUSTUS_CONFIG_COPY
 echo "AUGUSTUS_CONFIG_COPY is set to: $AUGUSTUS_CONFIG_COPY"
 
 
-# Replace the following paths with the correct paths to your input files
 GENOME=/home/juliaa/genomanalys/Data/Assembly/genome_assembly/repeat_masker_assembly/pilon_assembly.fasta.masked
 
 bam_files=/home/juliaa/genomanalys/Data/Assembly/transcriptome_assembly/star_rp/mapping_rp
